@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>collatz-wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, {collatz } from "./pkg/collatz_wasm.js";
+      init()
+        .then(() => {
+          const list = Array.from(collatz(10))
+          console.log(JSON.stringify(list))
+        });
+      </script>
+  </body>
+</html>
