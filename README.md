@@ -15,24 +15,20 @@ on positive integers this algorithm (the mathematical equivalent is called [Coll
 
 ## usage
 
-In a browser after building locally:
-```javascript
- import init, { collatz } from "./pkg/collatz_wasm.js"
- init()
-   .then(() => {
-      const list = Array.from(collatz(10))
-      console.log(JSON.stringify(list))
-   })
-```
+By installing from [npm](https://www.npmjs.com/package/collatz-wasm)
 
-or by installing from [npm](https://www.npmjs.com/package/collatz-wasm) and using a bundler with:
+`npm install collatz-wasm`
 
+and by using a bundler you should be able to import it in javascript like this:
 ```
-import init, { collatz } from "./pkg/collatz_wasm.js"
+import init, { collatz } from "collatz-wasm"
 
 ...
 
-collatz(1337)
+init()
+   .then(() => {
+      collatz(1337)
+   })
 ```
 
 ## plans for the future
@@ -53,6 +49,17 @@ and then install wasm-pack like-a-so: `$ cargo install wasm-pack`
 `$ wasm-pack build --target web`
 
 This builds the rust lib.rs into a file bundle at `pkg/` which is ready to be imported into a javascript environment that has wasm support.
+
+### using it locally from the git repository
+
+```javascript
+ import init, { collatz } from "./pkg/collatz_wasm.js"
+ init()
+   .then(() => {
+      const list = Array.from(collatz(10))
+      console.log(JSON.stringify(list))
+   })
+```
 
 ### test wasm bundle locally
 Start a local webserver (e.g. `python3 -m http.server`) and navigate to index.html to see a test page importing the compiled wasm (open Developer Tools to see result logged in the Javascript console).
