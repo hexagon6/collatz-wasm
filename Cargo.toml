@@ -1,6 +1,6 @@
 [package]
 name = "collatz-wasm"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2018"
 authors = ["Hexagon Sixx <npm@fet.li>"]
 description = "Collatz Conjecture function in WASM"
