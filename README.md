@@ -20,7 +20,7 @@ By installing from [npm](https://www.npmjs.com/package/collatz-wasm)
 `npm install collatz-wasm`
 
 and by using a bundler you should be able to import it in javascript like this:
-```
+```javascript
 import init, { collatz } from "collatz-wasm"
 
 ...
