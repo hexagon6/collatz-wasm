@@ -1,0 +1,21 @@
+{
+  "name": "collatz-wasm",
+  "collaborators": [
+    "Hexagon Sixx <npm@fet.li>"
+  ],
+  "description": "Collatz Conjecture function in WASM",
+  "version": "0.1.2",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexagon6/collatz-wasm"
+  },
+  "files": [
+    "collatz_wasm_bg.wasm",
+    "collatz_wasm.js",
+    "collatz_wasm.d.ts"
+  ],
+  "module": "collatz_wasm.js",
+  "types": "collatz_wasm.d.ts",
+  "sideEffects": false
+}
